@@ -5,18 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseNavigatorComponent } from './course-navigator/course-navigator.component';
 import {CourseService} from './services/CourseService';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import {FormsModule} from '@angular/forms';
+import {UserService} from './services/UserService';
+import { AdminUsersComponent } from './admin-users/admin-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseNavigatorComponent
+    CourseNavigatorComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
+    AdminUsersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
-    CourseService
+    CourseService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
