@@ -1,1 +1,12 @@
-<p>module-list works!</p>
+<div class="container-fluid">
+  <h1>Module List</h1>
+  <div class="row">
+    <div class="col-3">
+      <ul class="list-group">
+        <li *ngFor="let module of module_many" class="list-group-item">
+          {{module.title}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
