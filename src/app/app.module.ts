@@ -16,6 +16,7 @@ import {ModuleService} from './services/ModuleService';
 import { LessonListComponent } from './lesson-list/lesson-list.component';
 import {LessonService} from './services/LessonService';
 import { TopicListComponent } from './topic-list/topic-list.component';
+import {TopicService} from './services/TopicService';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { TopicListComponent } from './topic-list/topic-list.component';
     FormsModule
   ],
   providers: [
+    TopicService,
     LessonService,
     ModuleService,
     CourseService,

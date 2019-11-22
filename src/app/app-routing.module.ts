@@ -7,6 +7,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {AdminUsersComponent} from './admin-users/admin-users.component';
 import {ModuleListComponent} from './module-list/module-list.component';
 import {LessonListComponent} from './lesson-list/lesson-list.component';
+import {TopicListComponent} from './topic-list/topic-list.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'courses', component: CourseNavigatorComponent},
   {path: 'admin-users', component: AdminUsersComponent},
   {path: 'modules', component: ModuleListComponent},
-  {path: 'lessons', component: LessonListComponent}
+  {path: 'lessons', component: LessonListComponent},
+  {path: 'topics', component: TopicListComponent}
 ];
 
 @NgModule({

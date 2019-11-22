@@ -1,1 +1,15 @@
-<p>topic-list works!</p>
+<div class="container-fluid">
+  <h1>Lesson List</h1>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+      <ul class="nav nav-pills" role="tablist">
+        <li *ngFor="let topic of topic_many" className="nav-item" data-toggle="pill" role="tab">
+          <a class="nav-link">
+          {{topic.title}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
