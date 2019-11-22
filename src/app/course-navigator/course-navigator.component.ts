@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CourseService} from '../services/CourseService';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-course-navigator',
@@ -8,12 +9,13 @@ import {CourseService} from '../services/CourseService';
 })
 export class CourseNavigatorComponent implements OnInit {
 
-  courses = []
+  course_many = [];
 
-  constructor(private service: CourseService) { }
+  constructor(private service: CourseService,  private router: Router) {
+  }
 
   selectCourse(course) {
-    this.service.findModulesForCourse(course.id)
+    this.router.navigate(['modules'])
   }
 
   // selectModule(module) {
@@ -23,7 +25,7 @@ export class CourseNavigatorComponent implements OnInit {
 
   ngOnInit() {
     this.service.findAllCourses()
-      .then(courses => this.courses = courses);
+      .then(course_many => this.course_many = course_many);
   }
 
 }
