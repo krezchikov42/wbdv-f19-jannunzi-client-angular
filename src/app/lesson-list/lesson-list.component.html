@@ -1,1 +1,13 @@
-<p>lesson-list works!</p>
+<div class="container-fluid">
+  <h1>Lesson List</h1>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+      <ul class="list-group" role="tablist">
+        <li *ngFor="let lesson of lesson_many" class="list-group-item list-group-item-action" role="tab">
+          {{lesson.title}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
