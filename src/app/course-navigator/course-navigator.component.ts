@@ -9,20 +9,17 @@ import {CourseService} from '../services/CourseService';
 export class CourseNavigatorComponent implements OnInit {
 
   courses = []
-  modules = []
-  lessons = []
 
   constructor(private service: CourseService) { }
 
   selectCourse(course) {
     this.service.findModulesForCourse(course.id)
-      .then(modules => this.modules = modules);
   }
 
-  selectModule(module) {
-    this.service.findLessonsForModule(module.id)
-      .then(lessons => this.lessons = lessons);
-  }
+  // selectModule(module) {
+  //   this.service.findLessonsForModule(module.id)
+  //     .then(lessons => this.lessons = lessons);
+  // }
 
   ngOnInit() {
     this.service.findAllCourses()
