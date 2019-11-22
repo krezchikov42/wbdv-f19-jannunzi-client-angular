@@ -2,7 +2,8 @@
   <h1>Course Navigator</h1>
   <ul class="list-group">
     <li (click)="selectCourse(course)"
-      *ngFor="let course of course_many" class="list-group-item">
+      *ngFor="let course of course_many" class="list-group-item"
+      [ngClass]="{'active': course.id == selected_course.id}">
       {{course.title}}
     </li>
   </ul>

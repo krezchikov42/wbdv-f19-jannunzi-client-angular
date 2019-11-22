@@ -10,12 +10,14 @@ import {Router} from '@angular/router';
 export class CourseNavigatorComponent implements OnInit {
 
   course_many = [];
+  selected_course = {};
 
   constructor(private service: CourseService,  private router: Router) {
   }
 
   selectCourse(course) {
-    this.router.navigate(['modules'])
+    this.selected_course = course;
+    // this.router.navigate(['modules'])
   }
 
   // selectModule(module) {
