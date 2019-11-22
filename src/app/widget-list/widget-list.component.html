@@ -1,1 +1,15 @@
-<p>widget-list works!</p>
+<div class="container-fluid">
+  <h1>Widget List</h1>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+      <ul class="nav nav-pills" role="tablist">
+        <li *ngFor="let widget of widget_many" className="nav-item" data-toggle="pill" role="tab">
+          <a class="nav-link">
+            {{widget.type}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
