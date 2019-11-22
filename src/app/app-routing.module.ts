@@ -8,6 +8,7 @@ import {AdminUsersComponent} from './admin-users/admin-users.component';
 import {ModuleListComponent} from './module-list/module-list.component';
 import {LessonListComponent} from './lesson-list/lesson-list.component';
 import {TopicListComponent} from './topic-list/topic-list.component';
+import {WidgetListComponent} from './widget-list/widget-list.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'admin-users', component: AdminUsersComponent},
   {path: 'modules', component: ModuleListComponent},
   {path: 'lessons', component: LessonListComponent},
-  {path: 'topics', component: TopicListComponent}
+  {path: 'topics', component: TopicListComponent},
+  {path: 'widgets', component: WidgetListComponent}
 ];
 
 @NgModule({

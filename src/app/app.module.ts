@@ -17,6 +17,8 @@ import { LessonListComponent } from './lesson-list/lesson-list.component';
 import {LessonService} from './services/LessonService';
 import { TopicListComponent } from './topic-list/topic-list.component';
 import {TopicService} from './services/TopicService';
+import { WidgetListComponent } from './widget-list/widget-list.component';
+import {WidgetService} from './services/WidgetService';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import {TopicService} from './services/TopicService';
     AdminUsersComponent,
     ModuleListComponent,
     LessonListComponent,
-    TopicListComponent
+    TopicListComponent,
+    WidgetListComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import {TopicService} from './services/TopicService';
     FormsModule
   ],
   providers: [
+    WidgetService,
     TopicService,
     LessonService,
     ModuleService,
