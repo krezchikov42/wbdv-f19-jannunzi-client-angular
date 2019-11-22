@@ -17,13 +17,8 @@ export class CourseNavigatorComponent implements OnInit {
 
   selectCourse(course) {
     this.selected_course = course;
-    // this.router.navigate(['modules'])
+    this.router.navigate([this.router.url,course.id,'modules'])
   }
-
-  // selectModule(module) {
-  //   this.service.findLessonsForModule(module.id)
-  //     .then(lessons => this.lessons = lessons);
-  // }
 
   ngOnInit() {
     this.service.findAllCourses()

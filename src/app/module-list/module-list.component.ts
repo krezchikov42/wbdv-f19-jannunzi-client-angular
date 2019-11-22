@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ModuleService} from '../services/ModuleService';
 
 @Component({
@@ -8,14 +8,22 @@ import {ModuleService} from '../services/ModuleService';
   styleUrls: ['./module-list.component.css']
 })
 export class ModuleListComponent implements OnInit {
+  course_id = 1;
+  module_many = [];
 
-  module_many = []
-  constructor(private service: ModuleService,private router: Router ) {}
+  constructor(private service: ModuleService, private router: Router, private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit() {
-    this.service.findModulesForCourse(1).then(
-      module_many => this.module_many = module_many
-    );
+    // @ts-ignore
+    this.activatedRoute.params
+      .subscribe(params => {
+        this.course_id = params['cid']
+        this.service.findModulesForCourse(this.course_id).then(
+          module_many => this.module_many = module_many
+        );;
+      });
+
   }
 
 }

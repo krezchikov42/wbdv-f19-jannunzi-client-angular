@@ -17,10 +17,10 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'courses', component: CourseNavigatorComponent},
   {path: 'admin-users', component: AdminUsersComponent},
-  {path: 'modules', component: ModuleListComponent},
-  {path: 'lessons', component: LessonListComponent},
-  {path: 'topics', component: TopicListComponent},
-  {path: 'widgets', component: WidgetListComponent}
+  {path: 'courses/:cid/modules', component: ModuleListComponent},
+  {path: 'courses/:cid/modules/:mid/lessons', component: LessonListComponent},
+  {path: 'courses/:cid/modules/:mid/lessons/:lid/topics', component: TopicListComponent},
+  {path: 'courses/:cid/modules/:mid/lessons/:lid/topics/:tid/widgets', component: WidgetListComponent}
 ];
 
 @NgModule({
