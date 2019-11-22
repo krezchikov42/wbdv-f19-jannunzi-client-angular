@@ -11,6 +11,10 @@ import { ProfileComponent } from './profile/profile.component';
 import {FormsModule} from '@angular/forms';
 import {UserService} from './services/UserService';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { ModuleListComponent } from './module-list/module-list.component';
+import {ModuleService} from './services/ModuleService';
+import { LessonListComponent } from './lesson-list/lesson-list.component';
+import {LessonService} from './services/LessonService';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { AdminUsersComponent } from './admin-users/admin-users.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    AdminUsersComponent
+    AdminUsersComponent,
+    ModuleListComponent,
+    LessonListComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +33,8 @@ import { AdminUsersComponent } from './admin-users/admin-users.component';
     FormsModule
   ],
   providers: [
+    LessonService,
+    ModuleService,
     CourseService,
     UserService
   ],
