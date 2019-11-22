@@ -15,6 +15,7 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import {ModuleService} from './services/ModuleService';
 import { LessonListComponent } from './lesson-list/lesson-list.component';
 import {LessonService} from './services/LessonService';
+import { TopicListComponent } from './topic-list/topic-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {LessonService} from './services/LessonService';
     ProfileComponent,
     AdminUsersComponent,
     ModuleListComponent,
-    LessonListComponent
+    LessonListComponent,
+    TopicListComponent
   ],
   imports: [
     BrowserModule,
