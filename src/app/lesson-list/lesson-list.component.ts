@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class LessonListComponent implements OnInit {
 
   lesson_many = []
-  selected_lesson = {}
+  selected_lesson = {id:0}
   constructor(private service: LessonService, private router: Router) { }
 
   ngOnInit() {

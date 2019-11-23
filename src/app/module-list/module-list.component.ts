@@ -10,7 +10,7 @@ import {ModuleService} from '../services/ModuleService';
 export class ModuleListComponent implements OnInit {
   course_id = 1;
   module_many = [];
-  selected_module = {};
+  selected_module = {id:0};
 
   constructor(private service: ModuleService, private router: Router, private activatedRoute: ActivatedRoute) {
   }

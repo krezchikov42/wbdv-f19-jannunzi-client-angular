@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class TopicListComponent implements OnInit {
 
   topic_many = [];
-  selected_topic = {};
+  selected_topic = {id:0};
 
   constructor(private service: TopicService, private router: Router) {
   }
