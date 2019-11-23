@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 export class TopicListComponent implements OnInit {
 
   topic_many = [];
+  selected_topic = {};
 
   constructor(private service: TopicService, private router: Router) {
   }
@@ -20,4 +21,8 @@ export class TopicListComponent implements OnInit {
     );
   }
 
+  selectTopic(topic: any) {
+    this.selected_topic = topic;
+    this.router.navigate([this.router.url, topic.id, 'widgets'])
+  }
 }

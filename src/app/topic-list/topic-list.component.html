@@ -1,10 +1,12 @@
 <div class="container-fluid">
-  <h1>Lesson List</h1>
+  <h1>Topic List</h1>
   <div class="row">
     <div class="col-3"></div>
     <div class="col-9">
       <ul class="nav nav-pills" role="tablist">
-        <li *ngFor="let topic of topic_many" className="nav-item" data-toggle="pill" role="tab">
+        <li *ngFor="let topic of topic_many" className="nav-item" data-toggle="pill" role="tab"
+            (click)="selectTopic(topic)"
+            [ngClass]="{'active': topic.id == selected_topic.id}">
           <a class="nav-link">
           {{topic.title}}
           </a>

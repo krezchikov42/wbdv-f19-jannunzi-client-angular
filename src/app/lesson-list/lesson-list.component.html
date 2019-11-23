@@ -4,7 +4,9 @@
     <div class="col-3"></div>
     <div class="col-9">
       <ul class="list-group" role="tablist">
-        <li *ngFor="let lesson of lesson_many" class="list-group-item list-group-item-action" role="tab">
+        <li *ngFor="let lesson of lesson_many" class="list-group-item list-group-item-action" role="tab"
+            (click)="selectLesson(lesson)"
+            [ngClass]="{'active': lesson.id == selected_lesson.id}">
           {{lesson.title}}
         </li>
       </ul>
