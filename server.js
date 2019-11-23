@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-app.use(express.static('./dist/wbdv-f19-jannuzi-client-angular'));
+app.use(express.static('./dist/src'));
 app.get('/*', function (req, res) {
-  res.sendFile(__dirname + '/dist/wbdv-f19-jannuzi-client-angular/index.html');
+  res.sendFile(__dirname + '/dist/src/index.html');
 });
 app.listen(process.env.PORT || 8080);
