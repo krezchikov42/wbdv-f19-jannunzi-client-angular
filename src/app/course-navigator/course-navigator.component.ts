@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class CourseNavigatorComponent implements OnInit {
 
   course_many = [];
-  selected_course = {};
+  selected_course = {id:0};
 
   constructor(private service: CourseService,  private router: Router) {
   }
